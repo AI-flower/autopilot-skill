@@ -1,0 +1,36 @@
+name: Publish to Skill Registry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills.json'
+      - 'SKILL.md'
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read skills.json
+        id: meta
+        run: |
+          echo "version=$(jq -r .version skills.json)" >> $GITHUB_OUTPUT
+          echo "name=$(jq -r .name skills.json)" >> $GITHUB_OUTPUT
+
+      - name: Notify community registry
+        run: |
+          curl -s -X POST https://api.ai-praxis.community/api/skills \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.REGISTRY_TOKEN }}" \
+            -d @skills.json \
+            -o /dev/null -w "%{http_code}" || echo "Registry notify: best-effort"
+
+      - name: Update GitHub release notes
+        if: github.event_name == 'release'
+        run: |
+          echo "✅ v${{ steps.meta.outputs.version }} published"
+          echo "Install: curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh | bash"

@@ -1,0 +1,8 @@
+{
+  "name": "praxis",
+  "description": "Universal AI task execution engine with solution library and capability auto-install",
+  "version": "0.4.0",
+  "author": { "name": "weon" },
+  "license": "MIT",
+  "keywords": ["praxis", "automation", "task-execution", "solution-library", "capability-detection"]
+}

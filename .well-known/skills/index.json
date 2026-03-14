@@ -1,0 +1,10 @@
+{
+  "skills": [
+    {
+      "name": "praxis",
+      "description": "Universal AI task execution engine. Analyzes intent, auto-installs dependencies, executes tasks with minimal user interaction. Covers automation, development, content creation, data analysis, and more.",
+      "url": "https://raw.githubusercontent.com/AI-flower/praxis-skill/main/skills/praxis/SKILL.md",
+      "source": "AI-flower/praxis-skill"
+    }
+  ]
+}

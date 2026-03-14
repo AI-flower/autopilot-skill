@@ -1,0 +1,63 @@
+{
+  "name": "praxis",
+  "display_name": "Praxis",
+  "description": "Describe any task in natural language — Praxis analyzes intent, installs dependencies, and executes automatically. Covers all industries: development, content creation, data analysis, DevOps, marketing, and more.",
+  "version": "0.4.3",
+  "author": "AI-flower",
+  "license": "MIT",
+  "homepage": "https://github.com/AI-flower/praxis-skill",
+  "repository": "https://github.com/AI-flower/praxis-skill",
+  "install": "https://raw.githubusercontent.com/AI-flower/praxis-skill/main/install.sh",
+  "skill_file": "SKILL.md",
+  "keywords": [
+    "praxis",
+    "automation",
+    "task-execution",
+    "ai",
+    "universal",
+    "claude-code",
+    "claude-code-skill",
+    "claude-skill",
+    "anthropic",
+    "workflow",
+    "productivity",
+    "content-creation",
+    "data-analysis",
+    "devops"
+  ],
+  "categories": [
+    "automation",
+    "productivity",
+    "ai",
+    "development"
+  ],
+  "compatibility": {
+    "claude_code": ">=2.1.0",
+    "platforms": [
+      "darwin",
+      "linux"
+    ]
+  },
+  "requirements": {
+    "bins": [
+      "python3",
+      "curl",
+      "git"
+    ],
+    "python_packages": []
+  },
+  "features": [
+    "Intent analysis & plan generation",
+    "Auto dependency installation",
+    "Credential auto-resolution",
+    "Free API tier auto-registration",
+    "Email with file/video attachment",
+    "PDF/Word/Video content generation",
+    "Locale-aware file naming",
+    "Solution library (reuse past executions)",
+    "find-skill / install-skill / register-skill commands"
+  ],
+  "install_count": 0,
+  "stars": 0,
+  "updated_at": "2026-03-12"
+}
